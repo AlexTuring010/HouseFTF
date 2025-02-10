@@ -18,3 +18,49 @@ This project is a **single-page prototype** meant for a hackathon and demonstrat
 - **Advanced AI Integration**: The tool will leverage more sophisticated data manipulation, using geographic and demographic datasets to generate optimized, cost-efficient, and sustainable home plans for specific areas.
 - **User Login & Data Saving**: Users will be able to create accounts, save their data, and revisit their home plans later.
 - **Expanded Front-End Interactivity**: A more interactive design with real-time visualizations of the building process, including energy usage, material choices, and more.
+
+---
+
+### To run the project:
+
+#### 1. **Client Setup:**
+
+Navigate to the `client` folder and run the following commands:
+
+```bash
+npm install      # Install dependencies
+npm run dev      # Start the development server
+```
+
+#### 2. **Backend Setup:**
+
+Navigate to the `backend` folder and follow these steps:
+
+- **Create and activate a virtual environment:**
+  - On Windows:
+    ```bash
+    python -m venv venv
+    venv\Scripts\activate
+    ```
+  - On macOS/Linux:
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    ```
+
+- **Install dependencies:**
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+- **Start the backend server:**
+  ```bash
+  uvicorn main:app --reload --port 8000
+  ```
+
+---
+
+This project earned us **second place** in a recent hackathon! 🎉
+
+---
+
