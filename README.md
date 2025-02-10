@@ -1,5 +1,3 @@
----
-
 # FutureTect: Sustainable Housing Planning Tool
 
 ## Overview
