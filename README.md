@@ -67,5 +67,3 @@ Navigate to the `backend` folder and follow these steps to set up the back-end:
 ## Hackathon Achievement
 
 We’re proud to share that this project earned us **second place** in a recent hackathon! 🎉
-
----
