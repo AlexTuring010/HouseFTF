@@ -2,7 +2,7 @@
 
 ## Overview
 
-**FutureTect** is a prototype tool designed to help users plan sustainable, eco-friendly, and cost-effective housing solutions. The tool gathers basic information from users, such as location, budget, and sustainability preferences, and then provides insightful predictions and recommendations to guide their decisions. 
+**FutureTect** is a prototype tool designed to help users plan sustainable, eco-friendly, and cost-effective housing solutions. The tool gathers key information from users, including location, number of people in the household, wall-to-window ratio, insulation quality, and other basic building characteristics. Based on this data, it provides insightful predictions and recommendations to help users make informed decisions.
 
 At the end of the hackathon, the tool focuses on delivering key data points like energy-saving potential, carbon emissions, water usage, and more, helping users make informed choices for a sustainable future. 
 
