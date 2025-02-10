@@ -2,9 +2,9 @@
 
 ## Overview
 
-**FutureTect** is a prototype tool designed to assist users in planning sustainable, eco-friendly, and cost-effective housing solutions, especially for low-income communities. Leveraging the power of AI, the tool helps find the best locations for home construction and suggests methods to make the building process more efficient, environmentally friendly, and affordable.
+**FutureTect** is a prototype tool designed to help users plan sustainable, eco-friendly, and cost-effective housing solutions. The tool gathers basic information from users, such as location, budget, and sustainability preferences, and then provides insightful predictions and recommendations to guide their decisions. 
 
-This project is a **single-page prototype** developed for a hackathon, showcasing the potential of AI-powered, optimized home planning. It guides users through a simple, step-by-step form to collect key information such as location, budget, and sustainability preferences.
+At the end of the hackathon, the tool focuses on delivering key data points like energy-saving potential, carbon emissions, water usage, and more, helping users make informed choices for a sustainable future. 
 
 ---
 
