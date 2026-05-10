@@ -1,3 +1,8 @@
+# Root-level (stray npm install)
+/node_modules
+/package-lock.json
+/package.json
+
 #Frontend (Client)
 
 /client/node_modules

@@ -1,69 +1,54 @@
-# FutureTect: Sustainable Housing Planning Tool
+# HouseFTF — sustainable-housing estimator
 
-## Overview
+A small full-stack web app for a department-hosted sustainability hackathon at the University of Athens (Department of Informatics & Telecommunications). The user inputs building parameters (size, wall-to-window ratio, insulation level, latitude/longitude) and the app fetches local weather data and returns an estimate for energy/water consumption and related sustainability metrics.
 
-**FutureTect** is a prototype tool designed to help users plan sustainable, eco-friendly, and cost-effective housing solutions. The tool gathers key information from users, including location, number of people in the household, wall-to-window ratio, insulation quality, and other basic building characteristics. Based on this data, it provides insightful predictions and recommendations to help users make informed decisions.
+**The team placed 2nd in the hackathon.**
 
-At the end of the hackathon, the tool focuses on delivering key data points like energy-saving potential, carbon emissions, water usage, and more, helping users make informed choices for a sustainable future. 
+## Honest framing
 
----
+I want to be upfront about what this project actually is, since the original (much more enthusiastic) README oversold it:
 
-## Features
+- **Department-internal hackathon**, not a high-profile event.
+- **My contribution was the React frontend** — this was the first website I'd ever built, so the code reflects that (the components work, but they're not how I'd structure things today). I learned a lot doing it.
+- **The "AI" was teammate-built and didn't really pan out.** The repo has the integration scaffolding, but I wouldn't characterize the underlying model as a strong one.
+- **The OpenWeather call was the one piece that genuinely worked end-to-end** — given a coordinate, fetch weather, feed it into the estimate.
 
-- **Step-by-Step Form**: A user-friendly form for inputting housing preferences, including location, budget, and desired sustainable features.
-- **AI Integration**: Machine learning models trained on real housing data to offer smart recommendations, helping users make eco-friendly and cost-efficient choices.
-- **Cute Animations**: Interactive loading GIFs that enhance the user experience while data is processed.
+Kept the repo public for completeness and as an honest first-website artefact, not as a portfolio centerpiece.
 
----
+## Stack
 
-## Future Improvements
+- **Frontend:** React (Vite), with `react-dom`, a custom map picker, a small chatbot dialog, a loading screen
+- **Backend:** Python FastAPI (`server/main.py`), single `/api/estimate` endpoint
+- **External:** OpenWeather API for current weather at the user-picked coordinates
 
-- **Phase 2 Expansion**: The tool will provide detailed building plans based on multiple location analyses, offering customized solutions for different regions.
-- **Advanced AI Features**: More sophisticated data manipulation will generate optimized, cost-efficient, and sustainable home plans tailored to specific geographic and demographic needs.
-- **User Account System**: Users will be able to create accounts, save their data, and revisit their home plans later.
-- **Enhanced Front-End Interactivity**: Real-time visualizations of the building process, including energy usage, material choices, and more interactive design elements.
+## Run locally
 
----
-
-## Running the Project
-
-### 1. **Client Setup:**
-
-Navigate to the `client` folder and run the following commands to set up the front-end:
+You need an OpenWeather API key:
 
 ```bash
-npm install      # Install all required dependencies
-npm run dev      # Start the development server
+export OPENWEATHER_API_KEY="your-key"
 ```
 
-### 2. **Backend Setup:**
+Frontend:
 
-Navigate to the `backend` folder and follow these steps to set up the back-end:
+```bash
+cd client
+npm install
+npm run dev
+```
 
-- **Create and activate a virtual environment:**
-  - On Windows:
-    ```bash
-    python -m venv venv
-    venv\Scripts\activate
-    ```
-  - On macOS/Linux:
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    ```
+Backend (in a second terminal):
 
-- **Install dependencies:**
-  ```bash
-  pip install -r requirements.txt
-  ```
+```bash
+cd server
+python -m venv venv
+source venv/bin/activate     # Windows: venv\Scripts\activate
+pip install fastapi uvicorn requests
+uvicorn main:app --reload --port 8000
+```
 
-- **Start the backend server:**
-  ```bash
-  uvicorn main:app --reload --port 8000
-  ```
+Open `http://localhost:5173`.
 
----
+## License
 
-## Hackathon Achievement
-
-We’re proud to share that this project earned us **second place** in a recent hackathon! 🎉
+[MIT](LICENSE) — applies to my own code in this repo. The original FutureTect README phrasing (energy savings, carbon emissions claims) was hackathon-presentation framing and shouldn't be taken as warranted accuracy guarantees about the model's outputs.

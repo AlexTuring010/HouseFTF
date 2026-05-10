@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from model import get_estimate, get_weather_data
@@ -28,7 +29,7 @@ def read_hello():
 
 @app.get("/api/estimate")
 def estimate(building_size: float, wwr: float, insulation: float, lat: float, lon: float):
-    openweather_api_key = "d1d29f5d2f0bd71e49cff4024f23dbc5"
+    openweather_api_key = os.environ["OPENWEATHER_API_KEY"]
 
     # Retrieve weather data
     weather_data = get_weather_data(lat, lon, openweather_api_key)
