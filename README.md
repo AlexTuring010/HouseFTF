@@ -1,4 +1,4 @@
-# HouseFTF — sustainable-housing estimator
+# sustainable-housing-estimator
 
 A small full-stack web app for a department-hosted sustainability hackathon at the University of Athens (Department of Informatics & Telecommunications). The user inputs building parameters (size, wall-to-window ratio, insulation level, latitude/longitude) and the app fetches local weather data and returns an estimate for energy/water consumption and related sustainability metrics.
 
